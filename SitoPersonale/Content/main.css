@@ -338,13 +338,22 @@ span.txt-btn{
     font-weight: bold;
 }
 
-#headerwrap a{
+/*#headerwrap a{
     position: absolute;
     bottom: 0;
     right: 0;
     z-index:12;
     margin-right: 5px;
     font-size:13px;
+}*/
+
+.menu .menu-wrap a#credits{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size:13px;
+    text-transform:none;
+
 }
 
 div.modal-footer a{

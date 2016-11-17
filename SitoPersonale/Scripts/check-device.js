@@ -1,5 +1,4 @@
-﻿//alert("check-device.je - line 1");
-var isMobile = {
+﻿var isMobile = {
     Android: function () {
         //return navigator.userAgent.match(/Android/i);
         var result = navigator.userAgent.match(/Android/i) != null;
@@ -25,16 +24,34 @@ var isMobile = {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
-//console.log("isMobile.Android: " + isMobile.Android());
-//console.log("sono in isMobile.BlackBarry: " + isMobile.BlackBerry());
-//console.log("sono in isMobile.iOS: " + isMobile.iOS());
-//console.log("sono in isMobile.Opera: " + isMobile.Opera());
-//console.log("sono in isMobile.Windows: " + isMobile.Windows());
-//console.log("sono in isMobile.any: " + isMobile.any());
-//console.log(navigator.userAgent.toString());
-//console.log(navigator.userAgent.match(/Mozilla/i) != null);
 
+var Whatsapp = {
+    Android: function () {
+        //Mostra i tasti di contatto whatsapp
+        $('#wa-contact').show();
+        $("div.modal-footer #wa-contact").show();
 
+        //Imposta il collegamento a whatsapp - sintassi amdroid
+        $('#wa-contact').attr("href", "intent://send/+393899649683#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end");
+        $("div.modal-footer #wa-contact").attr("href", "intent://send/+393899649683#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end");
+    },
+    iOS: function () {
+        //Mostra i tasti di contatto whatsapp
+        $("#wa-contact").show();
+        $("div.modal-footer #wa-contact").show();
+
+        //Imposta il collegamento a whatsapp - sintassi iOS
+        $('#wa-contact').attr("href", "whatsapp://app?abid=+393899649683");
+        $("div.modal-footer #wa-contact").attr("href", "whatsapp://app?abid=+393899649683");
+    },
+    Off: function () {
+        //Nasconde i tasti di contatto whatsapp
+        $("#wa-contact").hide();
+        $("div.modal-footer #wa-contact").hide();
+    }
+};
+
+// Blocca lo scorrimento dello slider su mobile
 if (isMobile.any()) {
     $('.carousel').carousel({
         interval: false
@@ -43,18 +60,16 @@ if (isMobile.any()) {
 
 
 //-------------- Nasconde i tasti whatsapp
-
-$("#wa-contact").hide();
-//$("div.modal-footer #wa-contact").hide();
+Whatsapp.Off();
 
 
-//------------- Verifica il SO del dispositivo attualmente connesso e mostra il tasto whatsapp adeguato
+//------------- Verifica il SO del dispositivo attualmente connesso e richiama la funzione corrispondente
 if (isMobile.Android()) {
-    $('#wa-contact').show();
-    $('#wa-contact').attr("href", "intent://send/+393899649683#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end");
+    
+    Whatsapp.Android();
 }
 
 if (isMobile.iOS()) {
-    $('#wa-contact').show();
-    $('#wa-contact').attr("href", "whatsapp://app?abid=+393899649683");
+
+    Whatsapp.iOS();
 }
