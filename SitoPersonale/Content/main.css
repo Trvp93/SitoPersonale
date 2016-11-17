@@ -337,3 +337,16 @@ span.txt-btn{
     color:#444;
     font-weight: bold;
 }
+
+#headerwrap a{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index:12;
+    margin-right: 5px;
+    font-size:13px;
+}
+
+div.modal-footer a{
+    margin:10px;
+}

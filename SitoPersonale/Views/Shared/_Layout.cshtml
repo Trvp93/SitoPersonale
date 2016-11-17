@@ -18,7 +18,7 @@
     <script src="https://use.fontawesome.com/ba3764c026.js"></script>
     <script src="~/Scripts/jquery.min.js"></script>
     <script src="~/Scripts/modernizr-2.8.3.js"></script>
-    <script src="~/Scripts/check-device.js"></script>
+    
 
 
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
@@ -29,7 +29,6 @@
 
 </head>
 <body>
-
     <!-- Menu -->
     <nav class="menu" id="theMenu">
         <div class="menu-wrap">
@@ -42,7 +41,7 @@
             <a href="#"><i class="fa fa-facebook" style="font-size:18px;"></i></a>
             <a href="callto:manuel.petroni93@hotmail.com"><i style="font-size:18px;" class="fa fa-skype"></i></a>
             <a data-toggle="modal" data-target="#form_mail"><i style="font-size:18px;" class="fa fa-envelope"></i></a>
-            <a id="wa-contact" href="whatsapp://app?abid=+393899649683" target="_blank" rel="alternate"><i style="font-size:18px;" class="fa fa-whatsapp"></i></a>
+            <a href="whatsapp://app?abid=+393899649683" target="_blank" rel="alternate"><i id="wa-contact" style="font-size:18px;" class="fa fa-whatsapp"></i></a>
         </div>
 
         <!-- Menu button -->
@@ -63,15 +62,11 @@
                 <h4 style="color:white; font-family: 'Rock Salt', cursive;">Siti Web all'avanguardia, completamente responsive, pensati e sviluppati su misura per le tue esigenze!</h4>
                 <br>
                 <br>
-                <div class="col-lg-6 col-lg-offset-3">
-                </div>
-
-                <p style="font-size:14px; text-align:right; margin-top:100px; margin-right:5px;"><a style="cursor: pointer;" id="link-home" data-toggle="modal" data-target="#form_mail">Powered by Web-solutions.it</a></p>
 
             </div>
         </div><!-- /container -->
+        <a style="cursor: pointer;" data-toggle="modal" data-target="#form_mail">Powered by Web-solutions.it</a>
     </div><!-- /headerwrap -->
-
 
     <div class="container-fluid body-content">
         @RenderBody()
@@ -83,9 +78,10 @@
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/smoothscroll.js"></script>
     <script src="~/Scripts/main.js"></script>
+    <script src="~/Scripts/check-device.js"></script>
 
     @*@Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)*@
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)*@
 </body>
 </html>
