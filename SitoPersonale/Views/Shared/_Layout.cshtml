@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="~/img/web.png">
+
+    <title>Web Solutions</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="~/Content/main.css" rel="stylesheet">
+    <link href="~/Content/media-queries.css" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/ba3764c026.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script src="~/Scripts/check-device.js"></script>
+
+
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet" type="text/css">
+    @*@Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")*@
+
+</head>
+<body>
+
+    <!-- Menu -->
+    <nav class="menu" id="theMenu">
+        <div class="menu-wrap">
+            <h1 class="logo"><a href="#">Web Solutions</a></h1>
+            <i class="fa fa-times menu-close" id="chiudi-menu"></i>
+            <a href="#home" class="smoothScroll">Home</a>
+            <a href="#about" class="smoothScroll">Su Di Me</a>
+            <a href="#portfolio" class="smoothScroll">Servizi</a>
+            <a href="#contact" class="smoothScroll">Contatti</a>
+            <a href="#"><i class="fa fa-facebook" style="font-size:18px;"></i></a>
+            <a href="callto:manuel.petroni93@hotmail.com"><i style="font-size:18px;" class="fa fa-skype"></i></a>
+            <a data-toggle="modal" data-target="#form_mail"><i style="font-size:18px;" class="fa fa-envelope"></i></a>
+            <a id="wa-contact" href="whatsapp://app?abid=+393899649683" target="_blank" rel="alternate"><i style="font-size:18px;" class="fa fa-whatsapp"></i></a>
+        </div>
+
+        <!-- Menu button -->
+        <div id="menuToggle"><i class="fa fa-reorder" aria-hidden="true"></i></div>
+    </nav>
+
+    <!-- ========== HEADER SECTION ========== -->
+    <section id="home" name="home"></section>
+    <div id="headerwrap">
+        <div class="container">
+            <div class="logo">
+                <img src="~/img/web-logo.png">
+            </div>
+            <br>
+            <div class="row">
+                <h1 id="titolo_mobile" style="font-family: 'Rock Salt', cursive;">WEB SOLUTIONS</h1>
+                <br>
+                <h4 style="color:white; font-family: 'Rock Salt', cursive;">Siti Web all'avanguardia, completamente responsive, pensati e sviluppati su misura per le tue esigenze!</h4>
+                <br>
+                <br>
+                <div class="col-lg-6 col-lg-offset-3">
+                </div>
+
+                <p style="font-size:14px; text-align:right; margin-top:100px; margin-right:5px;"><a style="cursor: pointer;" id="link-home" data-toggle="modal" data-target="#form_mail">Powered by Web-solutions.it</a></p>
+
+            </div>
+        </div><!-- /container -->
+    </div><!-- /headerwrap -->
+
+
+    <div class="container-fluid body-content">
+        @RenderBody()
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="~/Scripts/classie.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/smoothscroll.js"></script>
+    <script src="~/Scripts/main.js"></script>
+
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)*@
+</body>
+</html>
