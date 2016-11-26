@@ -44,6 +44,15 @@ var Whatsapp = {
         $('#wa-contact').attr("href", "whatsapp://app?abid=+393899649683");
         $("div.modal-footer #wa-contact").attr("href", "whatsapp://app?abid=+393899649683");
     },
+    Windows: function () {
+        //Mostra i tasti di contatto whatsapp
+        $("#wa-contact").show();
+        $("div.modal-footer #wa-contact").show();
+
+        //Imposta il collegamento a whatsapp - sintassi windows phone
+        $('#wa-contact').attr("href", "whatsapp://app?abid=+393899649683");
+        $("div.modal-footer #wa-contact").attr("href", "whatsapp://app?abid=+393899649683");
+    },
     Off: function () {
         //Nasconde i tasti di contatto whatsapp
         $("#wa-contact").hide();
@@ -65,11 +74,13 @@ function CallMobile() {
 
 // Verifica se il dispositivo connesso è mobile e imposta il DOM di conseguenza
 if (isMobile.any()) {
+
     // Blocca lo scorrimento dello slider su mobile
     $('.carousel').carousel({
         interval: false
     });
 
+    // Abilita le chiamate
     CallMobile();
 
 }
@@ -88,4 +99,10 @@ if (isMobile.Android()) {
 if (isMobile.iOS()) {
 
     Whatsapp.iOS();
+}
+
+if (isMobile.Windows()) {
+
+    Whatsapp.Windows();
+
 }

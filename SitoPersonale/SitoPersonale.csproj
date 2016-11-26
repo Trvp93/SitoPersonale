@@ -228,13 +228,16 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\main.css" />
     <Content Include="Content\media-queries.css" />
+    <Content Include="ErrorPages\Oops.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="font\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="img\android3.jpg" />
+    <Content Include="img\back_2.png" />
     <Content Include="img\dialog_close.png" />
+    <Content Include="img\error.png" />
     <Content Include="img\header-bg.jpg" />
     <Content Include="img\help.png" />
     <Content Include="img\joomla.png" />

@@ -355,3 +355,7 @@ div.modal-footer a{
 .menu .menu-wrap a i{
     margin:5px;
 }
+
+body strong.evidenzia{
+    color: #f85c37;
+}
